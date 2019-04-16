@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>280</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Minefield</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="margin">
+     <number>3</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="Viewer" name="viewer">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="renderHints">
+       <set>QPainter::Antialiasing|QPainter::HighQualityAntialiasing|QPainter::SmoothPixmapTransform|QPainter::TextAntialiasing</set>
+      </property>
+      <property name="viewportUpdateMode">
+       <enum>QGraphicsView::FullViewportUpdate</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>280</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Spiel">
+    <property name="title">
+     <string>&amp;Game</string>
+    </property>
+    <addaction name="action_spiel5"/>
+    <addaction name="action_spiel10"/>
+    <addaction name="action_spiel15"/>
+    <addaction name="action_eigenes_spiel"/>
+   </widget>
+   <widget class="QMenu" name="menu_Hilfe">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_about"/>
+    <addaction name="action_about_qt"/>
+   </widget>
+   <widget class="QMenu" name="menu_Bearbeiten">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="action_highscore"/>
+   </widget>
+   <widget class="QMenu" name="menu_datei">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_schliessen"/>
+   </widget>
+   <addaction name="menu_datei"/>
+   <addaction name="menu_Spiel"/>
+   <addaction name="menu_Bearbeiten"/>
+   <addaction name="menu_Hilfe"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_spiel5">
+   <property name="text">
+    <string>New &amp;easy game</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>About Minefield</string>
+   </property>
+  </action>
+  <action name="action_about_qt">
+   <property name="text">
+    <string>About QT</string>
+   </property>
+  </action>
+  <action name="action_spiel10">
+   <property name="text">
+    <string>New &amp;medium game</string>
+   </property>
+  </action>
+  <action name="action_spiel15">
+   <property name="text">
+    <string>New &amp;hard game</string>
+   </property>
+  </action>
+  <action name="action_eigenes_spiel">
+   <property name="text">
+    <string>New &amp;own game</string>
+   </property>
+  </action>
+  <action name="action_highscore">
+   <property name="text">
+    <string>Show highscore</string>
+   </property>
+  </action>
+  <action name="action_schliessen">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Viewer</class>
+   <extends>QGraphicsView</extends>
+   <header>Viewer.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resourcen.qrc"/>
+ </resources>
+ <connections/>
+</ui>
